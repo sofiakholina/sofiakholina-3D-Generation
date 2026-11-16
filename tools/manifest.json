@@ -1,0 +1,172 @@
+{
+ "id": "3d-generation",
+ "name": "sofiakholina 3D-Generation",
+ "version": "1.4.0",
+ "repo_url": "https://github.com/sofiakholina/sofiakholina-3D-Generation",
+ "update_url": "https://raw.githubusercontent.com/sofiakholina/sofiakholina-3D-Generation/main/tools/manifest.json",
+ "workflow_folder": "",
+ "comfyui_min": "0.45.0",
+ "comfyui_tested": "0.45.3",
+ "triton": {
+  "for": "-",
+  "by_torch": {}
+ },
+ "groups": [
+  {
+   "id": "base",
+   "always": true,
+   "workflows": [
+    "3D-Gen_TripoSplat.json",
+    "3D-Gen_Trellis.json",
+    "3D-Gen_Pixal_MV.json"
+   ]
+  }
+ ],
+ "nodes": [
+  {
+   "name": "s_tools",
+   "folder": "s_tools",
+   "signature": [
+    "__init__.py",
+    "fbx_reader.py",
+    "ultratex.py"
+   ],
+   "own": true,
+   "ref": "7a3bc7f8acd2f495aac7e27d14fc2a51b703d2e2",
+   "label": "1.0.1",
+   "url": "https://codeload.github.com/sofiakholina/sofiakholina-s_tools/zip/7a3bc7f8acd2f495aac7e27d14fc2a51b703d2e2",
+   "pip": [],
+   "groups": [
+    "base"
+   ],
+   "workflows": [
+    "3D-Gen_TripoSplat.json",
+    "3D-Gen_Trellis.json",
+    "3D-Gen_Pixal_MV.json"
+   ]
+  }
+ ],
+ "models": [
+  {
+   "name": "birefnet.safetensors",
+   "folder": "background_removal",
+   "size": 444473596,
+   "urls": [
+    "https://huggingface.co/Comfy-Org/BiRefNet/resolve/main/background_removal/birefnet.safetensors"
+   ],
+   "source": "huggingface.co/Comfy-Org/BiRefNet",
+   "license": "MIT",
+   "workflows": [
+    "3D-Gen_TripoSplat.json",
+    "3D-Gen_Trellis.json",
+    "3D-Gen_Pixal_MV.json"
+   ]
+  },
+  {
+   "name": "triposplat_fp16.safetensors",
+   "folder": "diffusion_models",
+   "size": 741106994,
+   "urls": [
+    "https://huggingface.co/VAST-AI/TripoSplat/resolve/main/diffusion_models/triposplat_fp16.safetensors"
+   ],
+   "source": "huggingface.co/VAST-AI/TripoSplat",
+   "license": "MIT",
+   "workflows": [
+    "3D-Gen_TripoSplat.json"
+   ]
+  },
+  {
+   "name": "triposplat_vae_decoder_fp16.safetensors",
+   "folder": "vae",
+   "size": 576148442,
+   "urls": [
+    "https://huggingface.co/VAST-AI/TripoSplat/resolve/main/vae/triposplat_vae_decoder_fp16.safetensors"
+   ],
+   "source": "huggingface.co/VAST-AI/TripoSplat",
+   "license": "MIT",
+   "workflows": [
+    "3D-Gen_TripoSplat.json"
+   ]
+  },
+  {
+   "name": "dino_v3_vit_h.safetensors",
+   "folder": "clip_vision",
+   "size": 1681247696,
+   "urls": [
+    "https://huggingface.co/VAST-AI/TripoSplat/resolve/main/clip_vision/dino_v3_vit_h.safetensors"
+   ],
+   "source": "huggingface.co/VAST-AI/TripoSplat",
+   "license": "DINOv3 License",
+   "workflows": [
+    "3D-Gen_TripoSplat.json"
+   ]
+  },
+  {
+   "name": "flux2-vae.safetensors",
+   "folder": "vae",
+   "size": 336213556,
+   "urls": [
+    "https://huggingface.co/VAST-AI/TripoSplat/resolve/main/vae/flux2-vae.safetensors"
+   ],
+   "source": "huggingface.co/VAST-AI/TripoSplat",
+   "license": "Apache-2.0",
+   "workflows": [
+    "3D-Gen_TripoSplat.json"
+   ]
+  },
+  {
+   "name": "trellis_2_int8_convrot.safetensors",
+   "folder": "diffusion_models",
+   "size": 5253048192,
+   "urls": [
+    "https://huggingface.co/Comfy-Org/TRELLIS.2/resolve/main/diffusion_models/trellis_2_int8_convrot.safetensors"
+   ],
+   "source": "huggingface.co/Comfy-Org/TRELLIS.2",
+   "license": "MIT",
+   "workflows": [
+    "3D-Gen_Trellis.json"
+   ]
+  },
+  {
+   "name": "trellis_2_shape_vae_bf16.safetensors",
+   "folder": "vae",
+   "size": 1095844024,
+   "urls": [
+    "https://huggingface.co/Comfy-Org/Pixal3D/resolve/main/vae/trellis_2_shape_vae_bf16.safetensors"
+   ],
+   "source": "huggingface.co/Comfy-Org/TRELLIS.2",
+   "license": "MIT",
+   "workflows": [
+    "3D-Gen_Trellis.json",
+    "3D-Gen_Pixal_MV.json"
+   ]
+  },
+  {
+   "name": "dino_v3_L_naf_fp32.safetensors",
+   "folder": "clip_vision",
+   "size": 1215214176,
+   "urls": [
+    "https://huggingface.co/Comfy-Org/Pixal3D/resolve/main/clip_vision/dino_v3_L_naf_fp32.safetensors"
+   ],
+   "source": "huggingface.co/Comfy-Org/Pixal3D",
+   "license": "DINOv3 License",
+   "workflows": [
+    "3D-Gen_Trellis.json",
+    "3D-Gen_Pixal_MV.json"
+   ]
+  },
+  {
+   "name": "pixal3d_multiview_int8_convrot.safetensors",
+   "folder": "diffusion_models",
+   "size": 5584555824,
+   "urls": [
+    "https://huggingface.co/Comfy-Org/Pixal3D/resolve/main/diffusion_models/pixal3d_multiview_int8_convrot.safetensors"
+   ],
+   "source": "huggingface.co/Comfy-Org/Pixal3D",
+   "license": "MIT",
+   "workflows": [
+    "3D-Gen_Pixal_MV.json"
+   ]
+  }
+ ]
+}
