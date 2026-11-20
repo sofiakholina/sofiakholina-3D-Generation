@@ -10,6 +10,7 @@ Workflow:
 - **3D-Gen_Trellis - генерация по одному фото** (приблизительно, но без артефактов)
 - **3D-Gen_Pixal_MV - генерация по 1-4 видам** (результат не слишком хороший, но часто виды нужны)
 
+**Видео по этим Workflow на [YouTube](https://youtu.be/Sw3rYAtZyCk) и [VK](https://vkvideo.ru/video-226908262_456239133)**
 
 **Workflow текстурирования любой вашей 3D-модели здесь:** [sofiakholina-3D-Texturing](https://github.com/sofiakholina/sofiakholina-3D-Texturing).
 
