@@ -66,6 +66,8 @@ Workflows:
 - **3D-Gen_Trellis - generation from one photo** (approximate, but without artifacts)
 - **3D-Gen_Pixal_MV - generation from 1-4 views** (the result is not very good, but views are often needed)
 
+**Videos about these workflows on [YouTube](https://youtu.be/Sw3rYAtZyCk) and [VK](https://vkvideo.ru/video-226908262_456239133)**
+
 **Workflows for texturing any of your 3D models:** [sofiakholina-3D-Texturing](https://github.com/sofiakholina/sofiakholina-3D-Texturing).
 
 ## Install
